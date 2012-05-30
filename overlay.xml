@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layman>
+  <overlay name="regina-gentoo" quality="experimental" type="git"
+    src="git://github.com/enigma-/regina-gentoo.git"
+    contact="william.pettersson@gmail.com">
+    <link>http://github.com/enigma-/regina-gentoo/tree/master</link>
+    <description>Regina packages for Gentoo</description>
+  </overlay>
+</layman>
