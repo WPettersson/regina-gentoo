@@ -23,8 +23,8 @@ RDEPEND="dev-libs/boost[python]
 	dev-libs/popt
 	dev-libs/libxml2
 	qt4? (
-		>=x11-libs/qt-core-4.6
-		>=x11-libs/qt-gui-4.6
+		>=x11-libs/qtcore-4.6
+		>=x11-libs/qtgui-4.6
 	)
 	cppunit? (
 		dev-util/cppunit
