@@ -24,12 +24,12 @@ RDEPEND="dev-libs/boost[python]
 	qt4? (
 		>=dev-qt/qtcore-4.6
 		>=dev-qt/qtgui-4.6
+		sourcehighlight? (
+			>=dev-util/source-highlight-3.1.1
+		)
 	)
 	cppunit? (
 		dev-util/cppunit
-	)
-	sourcehighlight? (
-		>=dev-util/source-highlight-3.1.1
 	)
 	doc? (
 		app-doc/doxygen
