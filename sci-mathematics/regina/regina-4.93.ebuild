@@ -1,6 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation, William Pettersson
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.106 2012/04/26 06:35:27 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"

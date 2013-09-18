@@ -1,6 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation, William Pettersson
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.106 2012/04/26 06:35:27 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -14,8 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+qt4 cppunit sourcehighlight doc mpi"
+KEYWORDS="~amd64 ~x86"
+IUSE="qt4 cppunit sourcehighlight doc mpi"
 
 RDEPEND="dev-libs/boost[python]
 	dev-lang/python
@@ -23,14 +22,14 @@ RDEPEND="dev-libs/boost[python]
 	dev-libs/popt
 	dev-libs/libxml2
 	qt4? (
-		>=x11-libs/qt-core-4.6
-		>=x11-libs/qt-gui-4.6
+		>=dev-qt/qtcore-4.6
+		>=dev-qt/qtgui-4.6
+		sourcehighlight? (
+			>=dev-util/source-highlight-3.1.1
+		)
 	)
 	cppunit? (
 		dev-util/cppunit
-	)
-	sourcehighlight? (
-		>=dev-util/source-highlight-3.1.1
 	)
 	doc? (
 		app-doc/doxygen
