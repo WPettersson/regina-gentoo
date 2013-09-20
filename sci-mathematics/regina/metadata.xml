@@ -5,7 +5,6 @@
   <email>william@ewpettersson.se</email>
   <name>William Petersson</name>
 </maintainer>
-<herd>sci-mathematics</herd>
 <longdescription lang="en">
  Regina is a suite of mathematical software for 3-manifold topologists.
  It focuses on the study of 3-manifold triangulations and normal surfaces.
