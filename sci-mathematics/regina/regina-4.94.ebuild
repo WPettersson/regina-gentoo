@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation, William Pettersson
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python2{_6,_7} )
 
-
-inherit eutils cmake-utils python
+inherit eutils cmake-utils python-r1
 
 DESCRIPTION="Software for 3-manifold topology and normal surface theory"
 HOMEPAGE="http://regina.source-forge.net/"
@@ -14,10 +14,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt4 cppunit sourcehighlight doc mpi"
+IUSE="qt4 test sourcehighlight doc mpi"
 
 RDEPEND="dev-libs/boost[python]
-	dev-lang/python
+	${PYTHON_DEPS}
 	dev-libs/gmp[cxx]
 	dev-libs/popt
 	dev-libs/libxml2
@@ -28,14 +28,21 @@ RDEPEND="dev-libs/boost[python]
 			>=dev-util/source-highlight-3.1.1
 		)
 	)
-	cppunit? (
-		dev-util/cppunit
-	)
-	doc? (
-		app-doc/doxygen
-		dev-libs/libxslt
-		)
 	mpi? (
 		virtual/mpi
 	) "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? (
+		app-doc/doxygen
+		dev-libs/libxslt
+	)
+	test? (
+		dev-util/cppunit
+	)"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_disable qt4 GUI)
+	)
+	cmake-utils_src_configure
+}

@@ -1,12 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.106 2012/04/26 06:35:27 phajdan.jr Exp $
+# $Header: $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python2{_6,_7} )
 
-
-inherit eutils cmake-utils python subversion 
+inherit eutils cmake-utils python-r1 subversion
 
 DESCRIPTION="Software for 3-manifold topology and normal surface theory"
 HOMEPAGE="http://regina.source-forge.net/"
@@ -15,28 +14,28 @@ ESVN_REPO_URI="http://regina.svn.sourceforge.net/svnroot/regina/trunk/regina"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+qt4 cppunit sourcehighlight doc mpi"
+IUSE="+qt4 test sourcehighlight doc mpi"
 
 RDEPEND="dev-libs/boost[python]
-	dev-lang/python
+	${PYTHON_DEPS}
 	dev-libs/gmp[cxx]
 	dev-libs/popt
 	dev-libs/libxml2
 	qt4? (
-		>=x11-libs/qt-core-4.6
-		>=x11-libs/qt-gui-4.6
+		>=dev-qt/qtcore-4.6
+		>=dev-qt/qtgui-4.6
 		sourcehighlight? (
 			>=dev-util/source-highlight-3.1.1
 		)
 	)
-	cppunit? (
-		dev-util/cppunit
-	)
+	mpi? (
+		virtual/mpi
+	)"
+DEPEND="${RDEPEND}
 	doc? (
 		app-doc/doxygen
 		dev-libs/libxslt
-		)
-	mpi? (
-		virtual/mpi
-	) "
-DEPEND="${RDEPEND}"
+	)
+	test? (
+		dev-util/cppunit
+	)"
