@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt4 test sourcehighlight doc mpi"
+IUSE="+qt4 test sourcehighlight doc mpi"
 
 RDEPEND="dev-libs/boost[python]
 	${PYTHON_DEPS}
