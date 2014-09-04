@@ -21,6 +21,7 @@ RDEPEND="dev-libs/boost[python]
 	dev-libs/gmp[cxx]
 	dev-libs/popt
 	dev-libs/libxml2
+	dev-db/tokyocabinet
 	qt4? (
 		>=dev-qt/qtcore-4.6
 		>=dev-qt/qtgui-4.6
