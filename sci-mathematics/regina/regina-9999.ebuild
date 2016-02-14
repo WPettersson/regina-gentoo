@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_disable qt4 GUI)
+		$(cmake-utils_use_disable qt5 GUI)
 	)
 	cmake-utils_src_configure
 }
