@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 PYTHON_COMPAT=( python2{_6,_7} )
@@ -23,8 +23,8 @@ RDEPEND="dev-libs/boost[python]
 	dev-libs/libxml2
 	dev-db/tokyocabinet
 	qt4? (
-		>=dev-qt/qtcore-4.6
-		>=dev-qt/qtgui-4.6
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 		sourcehighlight? (
 			>=dev-util/source-highlight-3.1.1
 		)

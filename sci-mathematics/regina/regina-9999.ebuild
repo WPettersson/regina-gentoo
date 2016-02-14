@@ -1,15 +1,15 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 PYTHON_COMPAT=( python2{_6,_7} )
 
-inherit eutils cmake-utils python-r1 subversion
+inherit eutils cmake-utils python-r1 git-r3
 
 DESCRIPTION="Software for 3-manifold topology and normal surface theory"
 HOMEPAGE="http://regina.source-forge.net/"
-ESVN_REPO_URI="http://regina.svn.sourceforge.net/svnroot/regina/trunk/regina"
+EGIT_REPO_URI="git://git.code.sf.net/p/regina/git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,3 +39,10 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-util/cppunit
 	)"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_disable qt4 GUI)
+	)
+	cmake-utils_src_configure
+}
