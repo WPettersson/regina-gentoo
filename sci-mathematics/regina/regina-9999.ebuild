@@ -21,6 +21,7 @@ RDEPEND="dev-libs/boost[python]
 	dev-libs/gmp[cxx]
 	dev-libs/popt
 	dev-libs/libxml2
+	dev-db/tokyocabinet
 	qt5? (
 		dev-qt/qtwidgets:5
 		dev-qt/qtsvg:5
