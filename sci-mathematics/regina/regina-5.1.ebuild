@@ -8,8 +8,7 @@ PYTHON_COMPAT=( python2{_6,_7} )
 inherit eutils cmake-utils python-r1
 
 DESCRIPTION="Software for 3-manifold topology and normal surface theory"
-HOMEPAGE="http://regina.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+HOMEPAGE="http://regina-normal.github.io/"
 SRC_URI="https://github.com/regina-normal/regina/releases/download/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
