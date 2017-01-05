@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
+<maintainer type="person">
   <email>william@ewpettersson.se</email>
   <name>William Petersson</name>
 </maintainer>
@@ -22,6 +22,7 @@
 </longdescription>
 <use>
   <flag name="qt4">Enable the Qt4 GUI.</flag>
+  <flag name="qt5">Enable the Qt5 GUI.</flag>
   <flag name="test">Enable the test suite.</flag>
   <flag name="sourcehighlight">Enable support for sourcecode highlighting in
     the Python script editor.</flag>

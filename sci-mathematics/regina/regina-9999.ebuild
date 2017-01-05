@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -8,13 +8,13 @@ PYTHON_COMPAT=( python2{_6,_7} )
 inherit eutils cmake-utils python-r1 git-r3
 
 DESCRIPTION="Software for 3-manifold topology and normal surface theory"
-HOMEPAGE="http://regina.source-forge.net/"
-EGIT_REPO_URI="git://git.code.sf.net/p/regina/git"
+HOMEPAGE="http://regina-normal.github.io/"
+EGIT_REPO_URI="git@github.com:regina-normal/regina.git"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+qt5 test sourcehighlight doc mpi"
+IUSE="+qt5 test doc mpi"
 
 RDEPEND="dev-libs/boost[python]
 	${PYTHON_DEPS}
@@ -25,9 +25,6 @@ RDEPEND="dev-libs/boost[python]
 	qt5? (
 		dev-qt/qtwidgets:5
 		dev-qt/qtsvg:5
-		sourcehighlight? (
-			>=dev-util/source-highlight-3.1.1
-		)
 	)
 	mpi? (
 		virtual/mpi
