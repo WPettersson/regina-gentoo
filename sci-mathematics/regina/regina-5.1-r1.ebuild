@@ -13,6 +13,7 @@ SRC_URI="https://github.com/regina-normal/regina/releases/download/${P}/${P}.tar
 PATCHES=(
 	"${FILESDIR}"/${P}-patch_boost_python.patch
 	"${FILESDIR}"/${P}-gcc-7.patch
+	"${FILESDIR}"/${P}-qtui-python27.patch
 )
 
 LICENSE="GPL-2"
@@ -47,6 +48,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DDISABLE_GUI="$(usex qt5 no yes)"
 		-DPYTHON_EXECUTABLE=/usr/bin/python2
+		-DPYTHON_LIBRARY=/usr/lib64/libpython2.7.so
+		-DPYTHON_INCLUDE_DIR=/usr/include/python2.7
 	)
 	cmake-utils_src_configure
 }
