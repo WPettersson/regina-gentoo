@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		-DDISABLE_GUI="$(usex qt5)"
+		-DDISABLE_GUI="$(usex qt5 no yes)"
 		-DPYTHON_EXECUTABLE=/usr/bin/python2
 	)
 	cmake-utils_src_configure
