@@ -21,11 +21,8 @@
  high-performance clusters are in the separate package regina-normal-mpi.
 </longdescription>
 <use>
-  <flag name="qt4">Enable the Qt4 GUI.</flag>
   <flag name="qt5">Enable the Qt5 GUI.</flag>
   <flag name="test">Enable the test suite.</flag>
-  <flag name="sourcehighlight">Enable support for sourcecode highlighting in
-    the Python script editor.</flag>
   <flag name="doc">Compile and install the documentation.</flag>
   <flag name="mpi">Enable support for <pkg>virtual/mpi</pkg> parallelisation.</flag>
 </use>

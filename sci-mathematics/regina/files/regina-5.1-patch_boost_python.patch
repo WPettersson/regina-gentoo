@@ -1,0 +1,11 @@
+--- old/CMakeLists.txt.old	2020-01-19 00:24:25.014927722 +0000
++++ new/CMakeLists.txt	2020-01-19 00:23:18.915642190 +0000
+@@ -312,7 +312,7 @@
+   "http://www.digip.org/jansson/"
+   TRUE)
+ 
+-FIND_PACKAGE(Boost 1.55 COMPONENTS iostreams python)
++FIND_PACKAGE(Boost 1.55 COMPONENTS iostreams python27)
+ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+ MACRO_LOG_FEATURE(Boost_FOUND
+   "Boost (>= 1.55)"

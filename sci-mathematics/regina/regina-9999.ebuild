@@ -1,9 +1,8 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI="5"
-PYTHON_COMPAT=( python2{_6,_7} )
+EAPI=7
+PYTHON_COMPAT=( python3{_6,_7} )
 
 inherit eutils cmake-utils python-r1 git-r3
 

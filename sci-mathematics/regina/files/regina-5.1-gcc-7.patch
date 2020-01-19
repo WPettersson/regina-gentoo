@@ -1,0 +1,21 @@
+From 9bab3c9c86fdc426fff0a94ecffea612fe9817df Mon Sep 17 00:00:00 2001
+From: Benjamin Burton <bab@maths.uq.edu.au>
+Date: Thu, 31 Aug 2017 11:12:10 +0800
+Subject: [PATCH] Make it build under gcc7.
+
+---
+ engine/triangulation/dim3/triangulation3.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/engine/triangulation/dim3/triangulation3.h b/engine/triangulation/dim3/triangulation3.h
+index af71a3bf8..762ae91c3 100644
+--- a/engine/triangulation/dim3/triangulation3.h
++++ b/engine/triangulation/dim3/triangulation3.h
+@@ -42,6 +42,7 @@
+ #define __TRIANGULATION3_H
+ #endif
+ 
++#include <functional>
+ #include <map>
+ #include <memory>
+ #include <vector>
